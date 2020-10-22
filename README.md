@@ -1,6 +1,6 @@
 # Public Corpus OpenPose frame extractor
 
-The [Public DGS Corpus](ling.meine-dgs.de) provides [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) data for all of its transcripts.
+The [Public DGS Corpus](http://ling.meine-dgs.de) provides [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) data for all of its transcripts.
 Each transcript collects all of its pose information in a single file.
 This script converts these files into the one-frame-per-file format used by the OpenPose demo.
 
