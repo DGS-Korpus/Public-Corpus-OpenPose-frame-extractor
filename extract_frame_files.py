@@ -79,11 +79,13 @@ def batch_extract_json_frames(input_batches, output_dir=None, verbose=False):
     for input_batch in input_batches:
         for input_file in glob(input_batch):
             input_files.append(input_file)
+
     if verbose:
         print('Preparing to extract frame data from {} DGS-Korpus OpenPose files.'.format(len(input_files)))
-    for input_batch in input_batches:
-        for input_file in glob(input_batch):
-            extract_json_frames(input_filename=input_file, output_dir=output_dir, verbose=verbose)
+
+    for input_file in input_files:
+        extract_json_frames(input_filename=input_file, output_dir=output_dir, verbose=verbose)
+
     if verbose:
         print('Completed extraction.')
 
