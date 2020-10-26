@@ -12,10 +12,14 @@ from glob import glob
 
 def ensure_dir(filename: str):
     """
-    Make sure the directory actually exists
+    Make sure the directory actually exists.
     """
     filepath = os.path.dirname(filename)
-    os.makedirs(filepath, exist_ok=True)
+    if filepath:
+        try:
+            os.makedirs(filepath)
+        except os.error:
+            pass
 
 
 def get_output_subdirectory(input_filename, output_dir=None):
