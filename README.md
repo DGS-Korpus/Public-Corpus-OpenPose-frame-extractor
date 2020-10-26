@@ -8,11 +8,13 @@ This script converts these files into the one-frame-per-file format used by the 
 Python 2.7 or Python 3.
 
 ## Usage
->  extract_frame_files.py INPUT_FILE [INPUT_FILE ...]
+```sh
+wrap_openpose.py INPUT_FILE [INPUT_FILE ...]
+```
 
 __Positional arguments:__
-* INPUT_FILE:  The DGS-Korpus OpenPose file(s) from which to extract the OpenPose frame files. To run on a batch of similarly named files, use * (e.g. files/*.openpose.json)
+* `INPUT_FILE`: The DGS-Korpus OpenPose file(s) from which to extract the OpenPose frame files. To run on a batch of similarly named files, use `*` (e.g. `dgskorpus/*.openpose.json`)
 
 __Optional arguments:__
-* -o OUTPUT_DIR: Directory to which to extract the frames. If missing, a directory is created based on the location and filename of the input file.
-* -v: Provide information on the extraction process.
+* `-o OUTPUT_DIR`: Directory to which to extract the frames. If missing, a directory is created based on the location and filename of the input file.
+* `-v`: Provide information on the extraction process.
