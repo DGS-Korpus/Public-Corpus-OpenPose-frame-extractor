@@ -1,8 +1,12 @@
 # Public Corpus OpenPose frame extractor
 
 The [Public DGS Corpus](http://ling.meine-dgs.de) provides [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) data for all of its transcripts.
-Each transcript collects all of its pose information in a single file.
+Each transcript collects all of its pose information in a single file, using the _DGS-Korpus OpenPose wrapper format_.
 This script converts these files into the one-frame-per-file format used by the OpenPose demo.
+
+For more information, see the project note [_OpenPose in the Public DGS Corpus_](https://www.sign-lang.uni-hamburg.de/dgs-korpus/arbeitspapiere/AP06-2019-01.html).
+For the reverse procedure (many frame files to single wrapper file), see the [DGS-Korpus OpenPose wrapper](https://github.com/DGS-Korpus/DGS-Korpus-OpenPose-wrapper) script.
+
 
 ## Requirements
 Python 2.7 or Python 3.
