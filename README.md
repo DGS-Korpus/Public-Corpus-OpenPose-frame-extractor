@@ -1,3 +1,7 @@
+__Latest release:__ [![DOI](https://www.fdr.uni-hamburg.de/badge/DOI/10.25592/uhhfdm.8237.svg)](https://doi.org/10.25592/uhhfdm.8237)
+
+__This release:__ See [release description](https://github.com/DGS-Korpus/Public-Corpus-OpenPose-frame-extractor/releases/tag/v1.0.1).
+
 # Public Corpus OpenPose frame extractor
 
 The [Public DGS Corpus](http://ling.meine-dgs.de) provides [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) data for all of its transcripts.
