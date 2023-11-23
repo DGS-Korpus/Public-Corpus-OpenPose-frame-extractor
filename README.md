@@ -13,7 +13,8 @@ For the reverse procedure (many frame files to single wrapper file), see the [DG
 
 
 ## Requirements
-Python 2.7 or Python 3.
+Python 3.7 or later.
+Earlier versions should generally work, but item order in mappings is not guaranteed.
 
 ## Usage
 ```sh
