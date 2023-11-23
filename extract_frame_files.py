@@ -10,7 +10,7 @@ import json
 from glob import glob
 
 
-def ensure_dir(filename: str):
+def ensure_dir(filename):
     """
     Make sure the directory actually exists.
     """
