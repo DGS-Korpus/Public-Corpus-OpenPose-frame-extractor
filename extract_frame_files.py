@@ -51,13 +51,30 @@ def write_json(data, filename):
         json.dump(data, writer)
 
 
-def yield_openpose_frame_data(dgskorpus_data):
+def fix_version_type(frame_data):
+    """
+    Convert OpenPose version info to float, if it is stored as string.
+    Some transcripts of DGS Corpus release 3 and earlier stored versions as strings.
+    To match OpenPose's own format, they are changed to float values instead.
+    """
+    if "version" in frame_data:
+        version = frame_data['version']
+        if isinstance(version, str):
+            try:
+                frame_data['version'] = float(version)
+            except ValueError:
+                raise ValueError("Illegal version value: {}".format(version))
+
+
+def yield_openpose_frame_data(dgskorpus_data, apply_version_type_fix=True):
     """
     Given a corpus dataset, calculate the filename and data for each frame and yield them one by one.
     """
     filename_pattern = '{id}_{camera}.{width}x{height}.frame_{frame:0>13}.keypoints.json'
     for video_data in dgskorpus_data:
         for frame, frame_data in video_data['frames'].items():
+            if apply_version_type_fix:
+                fix_version_type(frame_data)
             filename = filename_pattern.format(frame=frame, **video_data)
             yield filename, frame_data
 
